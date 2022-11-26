@@ -1,2 +1,2 @@
-## languageIdentification
-# Automatic Language Identification Useing K-Means Clustring
+# Language identification
+## Automatic Language Identification Useing K-Means Clustring
