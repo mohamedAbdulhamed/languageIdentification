@@ -1,5 +1,5 @@
 # Language identification
-## Automatic Language Identification Using K-Means Clustring
+## Automatic Language Identification Using K-Means Clustering
 **! Free to anyone stuck in the AI project like us now !**
 
 Some basics before you start:
