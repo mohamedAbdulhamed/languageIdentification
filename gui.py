@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import re
+import main
 
 
 background = '#ccd3d6'
@@ -151,29 +152,28 @@ def sanitize_input(sentence):
 
 def get_lang(sentence):
     sanitized_input = sanitize_input(sentence)
-
-    return sanitized_input
+    return main.fun(sanitized_input)
 
 
 def try_again():
-    global result
+    global result_label
     global try_btn
     e.delete(0, 'end')
-    result.destroy()
+    result_label.destroy()
     try_btn.destroy()
 
 
 def click():
-    global result
+    global result_label
     global try_btn
     if not e.get() == '':
-        result = Label(window, text=f'The language is: {get_lang(e.get())}', font=(font, 12))
-        result.config(background=background)
-        result.pack(pady=60)
+        result_label = Label(window, text=f'The language is: {get_lang(e.get())}', font=(font, 12))
+        result_label.config(background=background)
+        result_label.pack(pady=60)
     else:
-        result = Label(window, text='No language has been entered!', font=(font, 12))
-        result.config(background=background)
-        result.pack(pady=60)
+        result_label = Label(window, text='No language has been entered!', font=(font, 12))
+        result_label.config(background=background)
+        result_label.pack(pady=60)
     try_btn = Button(window, text='Try again', command=try_again, font=(font, 10))
     try_btn.pack()
 
