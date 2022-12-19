@@ -4,5 +4,5 @@
 
 Some basics before you start:
 ```
-pip install numpy pandas regex scikit-learn
+pip install 
 ```
